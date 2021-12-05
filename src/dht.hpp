@@ -75,7 +75,7 @@ namespace dci::module::ppn::service
             bool operator()(const link::Id& a, const link::Id& b) const
             {
                 constexpr uint32 size = link::Id{}.size();
-                for(uint idx{size-1}; idx < size; --idx)
+                for(uint32 idx{size-1}; idx < size; --idx)
                 {
                     if(a[idx] == b[idx])
                     {
