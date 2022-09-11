@@ -277,7 +277,7 @@ namespace dci::module::ppn::service
     }
 
     /////////0/////////1/////////2/////////3/////////4/////////5/////////6/////////7
-    cmt::Future<void> Dht::onLocalPut(const api::Key& key, api::Value&& value, api::ProgressListner<>&& pl)
+    cmt::Future<None> Dht::onLocalPut(const api::Key& key, api::Value&& value, api::ProgressListner<>&& pl)
     {
         return awaitReady([this, key=key, value=std::move(value), pl=std::move(pl)]() mutable
         {
@@ -298,7 +298,7 @@ namespace dci::module::ppn::service
             }
 
             pl.reset();
-            return cmt::readyFuture<void>();
+            return cmt::readyFuture(None{});
         });
     }
 

@@ -24,7 +24,7 @@ namespace dci::module::ppn::service
         void updateReadyStatus();
 
     private:
-        cmt::Future<void> onLocalPut(const api::Key& key, api::Value&& value, api::ProgressListner<>&& pl);
+        cmt::Future<None> onLocalPut(const api::Key& key, api::Value&& value, api::ProgressListner<>&& pl);
         cmt::Future<Set<api::Value>> onLocalGet(const api::Key& key, uint32 limit, api::ProgressListner<>&& pl);
 
     private:

@@ -73,7 +73,7 @@ scope ppn::service::dht
     // интерфейс для пользователя
     interface Processor
     {
-        in put(Key, Value, ProgressListner) -> void;
+        in put(Key, Value, ProgressListner) -> none;
         in get(Key, uint32 limit, ProgressListner) -> set<Value>;
     }
 
