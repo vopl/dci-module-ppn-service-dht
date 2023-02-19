@@ -48,13 +48,13 @@ scope ppn::service::dht
         }
 
         alias Data = variant<
-            Nonce,
-            Raw,
-            ServiceId,
-            FileId,
-            TargetId,
-            TargetSignature,
-            TargetAddress
+            payload::Nonce,
+            payload::Raw,
+            payload::ServiceId,
+            payload::FileId,
+            payload::TargetId,
+            payload::TargetSignature,
+            payload::TargetAddress
         >;
     }
 
